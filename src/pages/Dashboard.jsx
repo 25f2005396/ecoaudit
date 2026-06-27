@@ -5,6 +5,7 @@ import WasteLogCard from "../components/WasteLogCard";
 import LoadingSpinner from "../components/LoadingSpinner";
 import EmptyState from "../components/EmptyState";
 import MapView from "../components/MapView";
+import WasteChart from "../components/WasteChart";
 
 function Dashboard() {
   const [wasteLogs, setWasteLogs] = useState([]);
@@ -66,6 +67,11 @@ function Dashboard() {
       {/* Map */}
       {totalLogs > 0 && (
         <MapView wasteLogs={wasteLogs} />
+      )}
+
+      {/* Chart */}
+      {totalLogs > 0 && (
+        <WasteChart wasteLogs={wasteLogs} />
       )}
 
       {/* Logs Feed */}
