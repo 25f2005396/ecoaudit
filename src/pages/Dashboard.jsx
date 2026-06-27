@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 import { getWasteLogs } from "../services/firestoreService";
 import TotalStats from "../components/TotalStats";
 import WasteLogCard from "../components/WasteLogCard";
+import LoadingSpinner from "../components/LoadingSpinner";
+import EmptyState from "../components/EmptyState";
 
 function Dashboard() {
   const [wasteLogs, setWasteLogs] = useState([]);
@@ -29,26 +31,31 @@ function Dashboard() {
   const totalLogs = wasteLogs.length;
 
   if (loading) {
-    return (
-      <p className="text-center text-gray-500 mt-10">
-        Loading waste logs...
-      </p>
-    );
+    return <LoadingSpinner message="Loading waste logs..." />;
   }
 
   if (error) {
     return (
-      <p className="text-center text-red-500 mt-10">
-        ❌ {error}
-      </p>
+      <div className="bg-red-50 border border-red-200 rounded-xl p-6 text-center">
+        <p className="text-red-600 font-medium">
+          ❌ {error}
+        </p>
+      </div>
     );
   }
 
   return (
     <div>
-      <h1 className="text-2xl font-bold text-green-600 mb-6">
-        🌍 EcoAudit Dashboard
-      </h1>
+
+      {/* Hero Section */}
+      <div className="mb-8">
+        <h1 className="text-3xl font-bold text-gray-800">
+          🌍 EcoAudit Dashboard
+        </h1>
+        <p className="text-gray-500 mt-2">
+          Track and monitor community waste reports in one place.
+        </p>
+      </div>
 
       {/* Stats */}
       {totalLogs > 0 && (
@@ -56,15 +63,15 @@ function Dashboard() {
       )}
 
       {/* Logs Feed */}
-      <div className="bg-white rounded-xl shadow-md p-6">
-        <h2 className="text-xl font-bold text-gray-800 mb-4">
+      <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-6">
+        <h2 className="text-lg font-semibold text-gray-800 mb-4">
           📋 Waste Logs
         </h2>
-
         {totalLogs === 0 ? (
-          <p className="text-gray-400 text-center py-8">
-            No waste logs yet. Be the first to log waste!
-          </p>
+          <EmptyState
+            title="No Waste Logs"
+            message="Be the first to log waste!"
+          />
         ) : (
           <div className="flex flex-col gap-3">
             {wasteLogs.map((log) => (
@@ -73,6 +80,7 @@ function Dashboard() {
           </div>
         )}
       </div>
+
     </div>
   );
 }
