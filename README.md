@@ -157,7 +157,21 @@ http://localhost:5173
 
 ## 📸 Screenshots
 
-> Screenshots of the Dashboard, Waste Logging page, Map View, and Analytics can be added here.
+### 🏠 Dashboard — Summary & Map
+
+![Dashboard Summary & Map](./public/screenshots/summary-and-map.png)
+
+### 📊 Dashboard — Analytics & Logs
+
+![Dashboard Analytics & Logs](./public/screenshots/analytics-and-logs.png)
+
+### 📝 Log Waste Form
+
+![Log Waste Form](./public/screenshots/log-waste-form.png)
+
+### 🗂️ Waste Categories
+
+![Waste Categories](./public/screenshots/waste-categories.png)
 
 ---
 
