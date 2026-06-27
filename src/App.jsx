@@ -1,7 +1,7 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import MainLayout from "./layouts/MainLayout";
-import Home from "./pages/Home";
+import Dashboard from "./pages/Dashboard";
 import LogWaste from "./pages/LogWaste";
 import NotFound from "./pages/NotFound";
 
@@ -12,7 +12,7 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route element={<MainLayout />}>
-          <Route path={ROUTES.HOME} element={<Home />} />
+          <Route path={ROUTES.HOME} element={<Dashboard />} />
           <Route path={ROUTES.LOG_WASTE} element={<LogWaste />} />
         </Route>
 

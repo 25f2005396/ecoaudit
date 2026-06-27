@@ -1,9 +1,9 @@
+import WasteForm from "../components/WasteForm";
+
 function LogWaste() {
   return (
     <div>
-      <h1 className="text-3xl font-bold">
-        Log Waste
-      </h1>
+      <WasteForm />
     </div>
   );
 }
