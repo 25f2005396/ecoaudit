@@ -9,7 +9,7 @@ Built for the **CodeChef VITC Projects Department** Recruitment Task.
 
 ## 🔗 Links
 
-- **Live Demo:** https://your-vercel-link.vercel.app
+- - **Live Demo:** https://ecoaudit-chi.vercel.app/
 - **GitHub:** https://github.com/25f2005396/ecoaudit
 
 ---
@@ -158,20 +158,16 @@ http://localhost:5173
 ## 📸 Screenshots
 
 ### 🏠 Dashboard — Summary & Map
-
-![Dashboard Summary & Map](./public/screenshots/summary-and-map.png)
+![Dashboard Summary and Map](public/screenshots/dashboard-1.png)
 
 ### 📊 Dashboard — Analytics & Logs
-
-![Dashboard Analytics & Logs](./public/screenshots/analytics-and-logs.png)
+![Dashboard Analytics](public/screenshots/dashboard-2.png)
 
 ### 📝 Log Waste Form
+![Log Waste Form](public/screenshots/log-waste-1.png)
 
-![Log Waste Form](./public/screenshots/log-waste-form.png)
-
-### 🗂️ Waste Categories
-
-![Waste Categories](./public/screenshots/waste-categories.png)
+### 📋 Waste Categories Dropdown
+![Waste Categories Dropdown](public/screenshots/log-waste-2.png)
 
 ---
 
@@ -192,3 +188,5 @@ To deploy, add your environment variables in Vercel:
 **Venkata Naga Teja N.**
 
 GitHub: https://github.com/25f2005396
+
+Live Demo: https://ecoaudit-chi.vercel.app/
